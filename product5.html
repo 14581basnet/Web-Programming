@@ -1,17 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Glazed Donut - Details</title>
+  <title>JavaScript Fundamentals - Enhanced Example</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; }
-    img { width: 300px; height: 300px; border: 2px solid #d2691e; }
-    a { display: inline-block; margin-top: 20px; text-decoration: none; color: #8B4513; }
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    button { padding: 10px 20px; font-size: 16px; }
+    #output { margin-top: 20px; font-weight: bold; color: #2c3e50; }
   </style>
 </head>
 <body>
-  <h1>Glazed Donut</h1>
-  <img src="https://tse3.mm.bing.net/th/id/OIP.ycNhEaOBymTygzl4191EgAHaE7?pid=Api&P=0&h=220" alt="Glazed Donut">
-  <p>Classic soft donut covered with a sweet glaze. Loved by everyone, any time of the day.</p>
-  <a href="index.html">← Back to Home</a>
+
+<h1>JavaScript Fundamentals Enhanced Demo</h1>
+
+<p>Enter two numbers and click "Calculate" to see arithmetic operations and evaluations.</p>
+
+<label for="num1">First Number:</label>
+<input type="text" id="num1" />
+<br><br>
+
+<label for="num2">Second Number:</label>
+<input type="text" id="num2" />
+<br><br>
+
+<button onclick="calculateResults()">Calculate</button>
+
+<p id="output"></p>
+
+<script>
+  function calculateResults() {
+    // Get input values and convert to numbers
+    let input1 = document.getElementById('num1').value.trim();
+    let input2 = document.getElementById('num2').value.trim();
+
+    let num1 = Number(input1);
+    let num2 = Number(input2);
+
+    // Validate inputs
+    if (input1 === '' || input2 === '') {
+      document.getElementById('output').innerHTML = 'Error: Please enter both numbers.';
+      return;
+    }
+
+    if (isNaN(num1) || isNaN(num2)) {
+      document.getElementById('output').innerHTML = 'Error: Please enter valid numeric values.';
+      return;
+    }
+
+    // Perform arithmetic operations
+    let sum = num1 + num2;
+    let difference = num1 - num2;
+    let product = num1 * num2;
+    let quotient = num2 !== 0 ? (num1 / num2).toFixed(2) : 'undefined (division by zero)';
+
+    // Control statement: categorize sum
+    let sumCategory;
+    if (sum > 100) {
+      sumCategory = 'The sum is very large.';
+    } else if (sum > 50) {
+      sumCategory = 'The sum is moderately large.';
+    } else if (sum >= 0) {
+      sumCategory = 'The sum is small or zero.';
+    } else {
+      sumCategory = 'The sum is negative.';
+    }
+
+    // Display results
+    document.getElementById('output').innerHTML = `
+      <strong>Results:</strong><br>
+      Sum: ${sum} <br>
+      Difference: ${difference} <br>
+      Product: ${product} <br>
+      Quotient: ${quotient} <br><br>
+      <em>${sumCategory}</em>
+    `;
+  }
+</script>
+
 </body>
 </html>
