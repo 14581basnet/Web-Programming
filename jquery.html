@@ -207,7 +207,7 @@
 
       $(".destination").click(function () {
         const place = $(this).text();
-        const message = `You selected ${place}. Here's a sneak peek at popular attractions! 🌍`;
+        const message = `You selected ${place}. Here's a sneak peek at popular attractions! `;
         $("#destination-info").hide().text(message).slideDown();
       });
 
@@ -215,7 +215,8 @@
         e.preventDefault();
         const destination = $("#place").val();
         const days = $("#days").val();
-        const msg = `Your trip to ${destination} is planned for ${days} day(s). ✈️ Get ready for an amazing experience!`;
+        const msg = `Your trip to ${destination} is planned for ${days} day(s). 
+         Get ready for an amazing experience!`;
         $("#result").hide().text(msg).fadeIn();
       });
     });

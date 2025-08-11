@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Ncell Web Page</title>
+    <link rel="stylesheet" href="Week3CSS" />
     <style>
+    <link rel="stylesheet" href="Week3CSS" />
+
         /* General Styles */
         body {
             margin: 0;
@@ -116,7 +119,7 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <img src="data:image/png;base64,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" alt="Ncell Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Ncell_logo.png" alt="Ncell Logo">
             <h1>Ncell</h1>
         </div>
         <nav>

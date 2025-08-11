@@ -1,79 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hide Elements Demo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <title>Ncell Web Page</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 40px;
-    }
+        /* Header */
+        header {
+            background-color: #730099;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-    .card {
-      border: 1px solid #ccc;
-      padding: 15px;
-      text-align: center;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
 
-    .label {
-      background-color: #fee;
-      color: red;
-      font-family: monospace;
-      font-weight: bold;
-      padding: 5px 10px;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
 
-    .img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      margin-bottom: 10px;
-      border-radius: 4px;
-    }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
 
-    .btn {
-      background-color: #00b386;
-      color: white;
-      padding: 10px;
-      width: 90%;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 6px;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .btn:hover {
-      background-color: #009970;
-    }
-  </style>
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        main {
+            padding: 30px;
+            background-color: white;
+        }
+
+        h2, h3, h4 {
+            color: #730099;
+        }
+
+        .features ul,
+        .awards ul {
+            padding-left: 20px;
+            list-style-type: square;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-left,
+        .footer-right {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+        }
+
+        .footer-left img {
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #bb86fc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- display:none example -->
-    <div class="card" id="card1">
-      <div class="label">display: none</div>
-      <img id="img1" class="img" src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?cs=srgb&dl=pexels-pixabay-159866.jpg&fm=jpg" alt="Sea View">
-      <button class="btn" onclick="document.getElementById('card1').style.display='none'">Remove</button>
-    </div>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Ncell_logo.png" alt="Ncell Logo">
+            <h1>Ncell</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Plans</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- visibility:hidden example -->
-    <div class="card">
-      <div class="label">visibility: hidden</div>
-      <img id="img2" class="img" src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?cs=srgb&dl=pexels-pixabay-159866.jpg&fm=jpg" alt="Forest Path">
-      <button class="btn" onclick="document.getElementById('img2').style.visibility='hidden'">Hide</button>
-    </div>
-  </div>
+    <!-- Main Content -->
+    <main>
+        <section class="intro">
+            <h2>Welcome to Ncell</h2>
+            <p>Ncell is Nepal’s leading mobile service provider, committed to keeping you connected with reliable voice, SMS, and data services.</p>
+        </section>
+
+        <section class="features">
+            <h3>Our Services</h3>
+            <ul>
+                <li>4G LTE High-Speed Internet</li>
+                <li>Affordable Data Packs</li>
+                <li>International Roaming</li>
+                <li>Customer Support 24/7</li>
+            </ul>
+        </section>
+
+        <section class="company">
+            <h2>Company Profile</h2>
+            <p>Ncell was established in 2004 and began operating as Mero Mobile in 2005. Rebranded to Ncell in 2010, it now provides 2G, 3G, 4G, and is ready for 5G services across Nepal.</p>
+            <p>We are constantly working towards the goal of connecting every Nepali through our network, providing high-quality modern services to consistently create better value.</p>
+            <a href="https://www.ncell.com.np/en/about/company-profile" target="_blank">Learn more about Ncell</a>
+        </section>
+
+        <section class="csr">
+            <h2>Sustainability & CSR</h2>
+            <p>Ncell contributes actively to education, environment, and health under its CSR initiatives, and supports Nepal's Digital Nepal vision.</p>
+        </section>
+
+        <section class="awards">
+            <h4>Awards & Recognition</h4>
+            <p><strong>2024</strong></p>
+            <ul>
+                <li>National HR Excellence Award</li>
+                <li>Excellence in Learning and Development Award</li>
+                <li>Recognition for Early Warning System by GoN</li>
+                <li>National ICT Excellence Award</li>
+                <li>DRRM & BCM Award</li>
+                <li>Best Practitioner in DRRM and BCM</li>
+            </ul>
+        </section>
+
+        <div class="image-container">
+            <img src="https://via.placeholder.com/250x150.png?text=Ncell+Image" alt="Ncell Image">
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Ncell_logo.png" alt="Ncell Logo">
+            <p>Here for you. Always on.</p>
+        </div>
+        <div class="footer-right">
+            <h3>Contact Us</h3>
+            <p>📍 Ncell Centre, Lainchaur, Kathmandu, Nepal</p>
+            <p>📞 +977 9809005000</p>
+            <p>✉️ care@ncell.axiata.com</p>
+            <p>Visit: <a href="https://www.ncell.axiata.com/" target="_blank">ncell.axiata.com</a></p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Ncell Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
